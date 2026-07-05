@@ -1,239 +1,2141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Go Green (G Coin)</title>
 
+<meta name="description" content="Go Green (G Coin) - Community Driven Green Cryptocurrency">
+
+<meta name="keywords" content="Go Green,G Coin,Crypto,Blockchain,Green,Meme Coin">
+
+<meta name="author" content="Go Green Team">
+
+<link rel="icon" href="logo.png">
+
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,sans-serif;
-background:#08131d;
-color:#fff;
-text-align:center;
+
+font-family:Arial,Helvetica,sans-serif;
+
+background:#06120d;
+
+color:white;
+
 line-height:1.7;
+
+overflow-x:hidden;
+
 }
 
-header{
-padding:60px 20px;
-background:linear-gradient(135deg,#18a558,#0f6d3d);
+/* Animated Background */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:-250px;
+
+left:-250px;
+
+width:700px;
+
+height:700px;
+
+background:#00ff8840;
+
+filter:blur(180px);
+
+z-index:-2;
+
+animation:bgMove1 14s ease-in-out infinite;
+
 }
 
-header img{
-width:180px;
-border-radius:50%;
-box-shadow:0 0 25px #00ff88;
-animation:float 3s ease-in-out infinite;
+body::after{
+
+content:"";
+
+position:fixed;
+
+bottom:-250px;
+
+right:-250px;
+
+width:650px;
+
+height:650px;
+
+background:#00cc6640;
+
+filter:blur(180px);
+
+z-index:-2;
+
+animation:bgMove2 18s ease-in-out infinite;
+
 }
 
-@keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
+@keyframes bgMove1{
+
+50%{
+
+transform:translate(120px,80px) scale(1.2);
+
 }
 
-h1{
-margin-top:20px;
-font-size:42px;
 }
 
-.subtitle{
-font-size:18px;
-opacity:.9;
-margin-top:10px;
+@keyframes bgMove2{
+
+50%{
+
+transform:translate(-120px,-60px) scale(1.15);
+
 }
 
-.button{
-display:inline-block;
-margin-top:30px;
-padding:14px 32px;
-background:#00c853;
-color:#fff;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-transition:.3s;
 }
 
-.button:hover{
-background:#00e676;
-transform:scale(1.05);
+/* Container */
+
+.container{
+
+width:92%;
+
+max-width:1200px;
+
+margin:auto;
+
 }
+
+/* Sections */
 
 section{
-padding:60px 20px;
-max-width:1000px;
-margin:auto;
+
+padding:90px 0;
+
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-top:30px;
+/* Headings */
+
+h1,h2,h3{
+
+font-weight:700;
+
 }
+
+h2{
+
+font-size:42px;
+
+text-align:center;
+
+margin-bottom:25px;
+
+color:#00ff99;
+
+}
+
+/* Glass Card */
 
 .card{
-background:#111827;
-padding:25px;
-border-radius:12px;
-transition:.3s;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:22px;
+
+padding:28px;
+
+transition:.35s;
+
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 20px rgba(0,255,150,.3);
+
+transform:translateY(-10px);
+
+box-shadow:0 0 35px rgba(0,255,120,.25);
+
 }
 
-footer{
-padding:30px;
-background:#0d1117;
-margin-top:50px;
+/* Grid */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
 }
 
-.social a{
+/* Buttons */
+
+.btn{
+
 display:inline-block;
-margin:10px;
-color:#00ff99;
+
+padding:15px 34px;
+
+border-radius:50px;
+
 text-decoration:none;
+
 font-weight:bold;
+
+transition:.35s;
+
 }
 
-.social a:hover{
-color:#fff;
+.btn-green{
+
+background:#00d96f;
+
+color:white;
+
+box-shadow:0 0 20px rgba(0,255,120,.35);
+
 }
+
+.btn-green:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 0 35px #00ff99;
+
+}
+
+.btn-outline{
+
+border:2px solid #00ff99;
+
+color:white;
+
+}
+
+.btn-outline:hover{
+
+background:#00d96f;
+
+}
+
+/* Navigation */
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:18px 0;
+
+background:rgba(0,0,0,.25);
+
+backdrop-filter:blur(16px);
+
+z-index:999;
+
+}
+
+nav .container{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:22px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#00ff99;
+
+}
+
+/* Responsive */
 
 @media(max-width:768px){
-h1{
-font-size:30px;
+
+h2{
+
+font-size:32px;
+
 }
 
-header img{
-width:140px;
+.grid{
+
+grid-template-columns:1fr;
+
 }
+
+nav ul{
+
+display:none;
+
 }
+
+}
+
 </style>
 
 </head>
 
 <body>
+  
+  <!-- ========================= -->
+<!-- PREMIUM NAVIGATION -->
+<!-- ========================= -->
 
-<header>
+<nav>
 
-<img src="logo.png" alt="Go Green Logo">
+<div class="container">
 
-<h1>🌿 Go Green (G Coin)</h1>
+<div style="font-size:28px;font-weight:bold;color:#00ff99;">
 
-<p class="subtitle">
-Community Driven • Green Future • Blockchain Innovation
+🌿 G Coin
+
+</div>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#tokenomics">Tokenomics</a></li>
+
+<li><a href="#roadmap">Roadmap</a></li>
+
+<li><a href="#whitepaper">Whitepaper</a></li>
+
+<li><a href="#faq">FAQ</a></li>
+
+<li><a href="#community">Community</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<!-- ========================= -->
+<!-- PREMIUM HERO SECTION -->
+<!-- ========================= -->
+
+<header id="home"
+
+style="
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:120px 20px 80px;
+
+">
+
+<div class="container">
+
+<div
+
+style="
+
+display:inline-block;
+
+padding:10px 24px;
+
+border-radius:40px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+margin-bottom:35px;
+
+color:#98ffb8;
+
+font-weight:bold;
+
+">
+
+🌱 COMMUNITY DRIVEN • GREEN FUTURE
+
+</div>
+
+<br>
+
+<img
+
+src="logo.png"
+
+alt="Go Green Logo"
+
+style="
+
+width:180px;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 25px #00ff99,
+
+0 0 60px rgba(0,255,150,.35);
+
+animation:logoFloat 4s ease-in-out infinite;
+
+">
+
+<style>
+
+@keyframes logoFloat{
+
+0%,100%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+</style>
+
+<h1
+
+style="
+
+font-size:62px;
+
+margin-top:30px;
+
+line-height:1.2;
+
+">
+
+Go Green
+
+<br>
+
+<span style="color:#66ff99;">
+
+(G Coin)
+
+</span>
+
+</h1>
+
+<p
+
+style="
+
+max-width:760px;
+
+margin:30px auto;
+
+font-size:20px;
+
+color:#dddddd;
+
+">
+
+Building a Sustainable Blockchain Future through Transparency,
+
+Innovation,
+
+Security and Community Power.
+
 </p>
 
-<a class="button"
-href="https://x.com/YOURUSERNAME"
-target="_blank">
-Follow on X
+<div style="margin-top:45px;">
+
+<a
+
+href="https://x.com/gogreencoinx"
+
+target="_blank"
+
+class="btn btn-green">
+
+🐦 Follow on X
+
 </a>
 
-</header>
+<a
 
-<section>
+href="#about"
 
-<h2>About G Coin</h2>
+class="btn btn-outline"
 
-<p style="margin-top:20px;">
-Go Green (G Coin) is a community-driven cryptocurrency project focused on sustainability,
-innovation, transparency and long-term blockchain adoption.
+style="margin-left:12px;">
+
+📖 Learn More
+
+</a>
+
+</div>
+
+<div
+
+class="grid"
+
+style="margin-top:80px;">
+
+<div class="card">
+
+<h2 style="font-size:42px;color:#00ff99;">
+
+🌍
+
+</h2>
+
+<h3>
+
+Green Vision
+
+</h3>
+
+<p>
+
+Building a cleaner and greener blockchain ecosystem.
+
 </p>
 
+</div>
+
+<div class="card">
+
+<h2 style="font-size:42px;color:#00ff99;">
+
+1B
+
+</h2>
+
+<h3>
+
+Max Supply
+
+</h3>
+
+<p>
+
+1,000,000,000 G Coin
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2 style="font-size:42px;color:#00ff99;">
+
+100%
+
+</h2>
+
+<h3>
+
+Community Driven
+
+</h3>
+
+<p>
+
+Powered completely by the community.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+  <!-- ===================================== -->
+<!-- ABOUT SECTION -->
+<!-- ===================================== -->
+
+<section id="about">
+
+<div class="container">
+
+<h2>🌿 About Go Green (G Coin)</h2>
+
+<p style="
+max-width:850px;
+margin:0 auto 55px;
+text-align:center;
+font-size:18px;
+color:#d7d7d7;">
+
+Go Green (G Coin) is a community-driven cryptocurrency project dedicated to building a greener, more transparent and sustainable blockchain ecosystem.
+
+Our mission is to empower people through decentralization while supporting long-term innovation and environmental responsibility.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<div style="font-size:55px;">🌱</div>
+
+<h3 style="margin:20px 0;color:#00ff99;">
+
+Eco Friendly
+
+</h3>
+
+<p>
+
+Designed to support sustainable blockchain development and environmentally conscious innovation.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:55px;">🔒</div>
+
+<h3 style="margin:20px 0;color:#00ff99;">
+
+Secure
+
+</h3>
+
+<p>
+
+Transparency, security and trust are the foundation of the Go Green ecosystem.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:55px;">🤝</div>
+
+<h3 style="margin:20px 0;color:#00ff99;">
+
+Community Driven
+
+</h3>
+
+<p>
+
+Every important step is guided by the community to ensure fairness and decentralization.
+
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<section>
+<!-- ===================================== -->
+<!-- LIVE PROJECT STATS -->
+<!-- ===================================== -->
 
-<h2>Tokenomics</h2>
+<section id="stats">
 
-<div class="cards">
+<div class="container">
+
+<h2>📊 Live Project Statistics</h2>
+
+<p style="
+text-align:center;
+max-width:720px;
+margin:0 auto 45px;
+color:#d7d7d7;">
+
+Current project statistics and ecosystem information.
+
+</p>
+
+<div class="grid">
 
 <div class="card">
-<h3>Total Supply</h3>
-<p>Coming Soon</p>
+
+<h2 style="color:#00ff99;">
+💰
+</h2>
+
+<h3>
+
+Price
+
+</h3>
+
+<p>
+
+Coming Soon
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>Network</h3>
-<p>Coming Soon</p>
+
+<h2 style="color:#00ff99;">
+👥
+</h2>
+
+<h3>
+
+Holders
+
+</h3>
+
+<p>
+
+Coming Soon
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>Contract</h3>
-<p>Coming Soon</p>
+
+<h2 style="color:#00ff99;">
+📈
+</h2>
+
+<h3>
+
+Market Cap
+
+</h3>
+
+<p>
+
+Coming Soon
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>Community</h3>
-<p>100% Community Driven</p>
+
+<h2 style="color:#00ff99;">
+🔥
+</h2>
+
+<h3>
+
+Burn Status
+
+</h3>
+
+<p>
+
+Coming Soon
+
+</p>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<section>
+<!-- ===================================== -->
+<!-- FEATURES -->
+<!-- ===================================== -->
 
-<h2>Roadmap</h2>
+<section id="features">
 
-<div class="cards">
+<div class="container">
+
+<h2>✨ Why Choose G Coin?</h2>
+
+<div class="grid">
 
 <div class="card">
-<h3>Phase 1</h3>
-<p>Website Launch</p>
+
+<h3 style="color:#00ff99;">
+
+⚡ Fast Growth
+
+</h3>
+
+<p>
+
+Focused on building a strong ecosystem with long-term development.
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>Phase 2</h3>
-<p>Community Growth</p>
+
+<h3 style="color:#00ff99;">
+
+🌍 Global Community
+
+</h3>
+
+<p>
+
+Connecting supporters around the world through blockchain technology.
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>Phase 3</h3>
-<p>Exchange Listing</p>
+
+<h3 style="color:#00ff99;">
+
+💎 Transparent
+
+</h3>
+
+<p>
+
+Open communication and transparent development for every community member.
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>Phase 4</h3>
-<p>Global Expansion</p>
+
+<h3 style="color:#00ff99;">
+
+🚀 Future Ready
+
+</h3>
+
+<p>
+
+Prepared for future utilities, partnerships and ecosystem expansion.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+  
+  <!-- ===================================== -->
+<!-- TOKENOMICS SECTION -->
+<!-- ===================================== -->
+
+<section id="tokenomics">
+
+<div class="container">
+
+<h2>💎 Tokenomics</h2>
+
+<p style="
+max-width:760px;
+margin:0 auto 50px;
+text-align:center;
+font-size:18px;
+color:#d7d7d7;">
+
+A transparent and sustainable token economy built for long-term community growth.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<div style="font-size:50px;">💰</div>
+
+<h3 style="margin:15px 0;color:#00ff99;">
+Max Supply
+</h3>
+
+<p style="font-size:22px;font-weight:bold;">
+1,000,000,000 G Coin
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:50px;">🌐</div>
+
+<h3 style="margin:15px 0;color:#00ff99;">
+Network
+</h3>
+
+<p>
+Coming Soon
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:50px;">🔒</div>
+
+<h3 style="margin:15px 0;color:#00ff99;">
+Liquidity
+</h3>
+
+<p>
+Locked After Launch
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:50px;">🤝</div>
+
+<h3 style="margin:15px 0;color:#00ff99;">
+Community
+</h3>
+
+<p>
+100% Community Driven
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:50px;">📜</div>
+
+<h3 style="margin:15px 0;color:#00ff99;">
+Contract Address
+</h3>
+
+<p id="contractAddress"
+style="
+word-break:break-all;
+font-size:14px;
+margin-bottom:15px;">
+
+Coming Soon
+
+</p>
+
+<button
+class="btn btn-green"
+onclick="copyContract()">
+
+📋 Copy Address
+
+</button>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:50px;">🔥</div>
+
+<h3 style="margin:15px 0;color:#00ff99;">
+Burn Mechanism
+</h3>
+
+<p>
+
+Details will be announced after launch.
+
+</p>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<section>
+<!-- ===================================== -->
+<!-- TOKEN DISTRIBUTION -->
+<!-- ===================================== -->
 
-<h2>Join Our Community</h2>
+<section id="distribution">
 
-<div class="social">
+<div class="container">
 
-<a href="https://x.com/YOURUSERNAME" target="_blank">X</a>
+<h2>📊 Token Distribution</h2>
 
-<a href="https://github.com/gogreencoinofficial" target="_blank">GitHub</a>
+<div class="grid">
 
-<a href="#">Telegram</a>
+<div class="card">
+
+<h3 style="color:#00ff99;">
+Community
+</h3>
+
+<p>
+
+TBA
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 style="color:#00ff99;">
+Liquidity
+</h3>
+
+<p>
+
+TBA
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 style="color:#00ff99;">
+Marketing
+</h3>
+
+<p>
+
+TBA
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 style="color:#00ff99;">
+Development
+</h3>
+
+<p>
+
+TBA
+
+</p>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<footer>
+<script>
+
+function copyContract(){
+
+const address=document.getElementById("contractAddress").innerText;
+
+if(address==="Coming Soon"){
+
+alert("Contract address has not been announced yet.");
+
+return;
+
+}
+
+navigator.clipboard.writeText(address);
+
+alert("Contract Address Copied Successfully!");
+
+}
+
+</script>
+  
+  <!-- ===================================== -->
+<!-- WHITEPAPER SECTION -->
+<!-- ===================================== -->
+
+<section id="whitepaper">
+
+<div class="container">
+
+<h2>📄 Whitepaper</h2>
+
+<p style="
+max-width:800px;
+margin:0 auto 50px;
+text-align:center;
+font-size:18px;
+color:#d8d8d8;">
+
+The Go Green (G Coin) Whitepaper outlines our vision, mission, token utility,
+roadmap and long-term ecosystem development.
+
+Our commitment is to build a transparent and sustainable blockchain project for everyone.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<div style="font-size:52px;margin-bottom:18px;">
+🌍
+</div>
+
+<h3 style="color:#00ff99;margin-bottom:15px;">
+
+Vision
+
+</h3>
+
+<p>
+
+To create a globally recognized green blockchain ecosystem that promotes sustainability, innovation and financial freedom.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:52px;margin-bottom:18px;">
+🎯
+</div>
+
+<h3 style="color:#00ff99;margin-bottom:15px;">
+
+Mission
+
+</h3>
+
+<p>
+
+Build a secure, transparent and community-powered cryptocurrency that supports long-term ecosystem growth.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:52px;margin-bottom:18px;">
+⚡
+</div>
+
+<h3 style="color:#00ff99;margin-bottom:15px;">
+
+Utility
+
+</h3>
+
+<p>
+
+Future utilities may include payments, staking, governance, rewards and ecosystem integrations.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:52px;margin-bottom:18px;">
+🛡️
+</div>
+
+<h3 style="color:#00ff99;margin-bottom:15px;">
+
+Transparency
+
+</h3>
+
+<p>
+
+Every important update, roadmap milestone and ecosystem change will be shared openly with the community.
+
+</p>
+
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:60px;">
+
+<a href="#"
+
+class="btn btn-green">
+
+📥 Whitepaper (Coming Soon)
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- PROJECT VALUES -->
+<!-- ===================================== -->
+
+<section id="values">
+
+<div class="container">
+
+<h2>🌱 Our Core Values</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3 style="color:#00ff99;">
+🌿 Sustainability
+</h3>
+
+<p>
+
+Supporting environmentally responsible blockchain innovation.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 style="color:#00ff99;">
+🤝 Community
+</h3>
+
+<p>
+
+Growing together through decentralization, fairness and transparency.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 style="color:#00ff99;">
+🔒 Security
+</h3>
+
+<p>
+
+Building trust through safe development and responsible project management.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 style="color:#00ff99;">
+🚀 Innovation
+</h3>
+
+<p>
+
+Continuously improving technology and expanding the Go Green ecosystem.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+  
+  <!-- ===================================== -->
+<!-- ROADMAP SECTION -->
+<!-- ===================================== -->
+
+<section id="roadmap">
+
+<div class="container">
+
+<h2>🛣️ Roadmap</h2>
+
+<p style="
+max-width:800px;
+margin:0 auto 50px;
+text-align:center;
+font-size:18px;
+color:#d8d8d8;">
+
+Our roadmap represents the long-term vision of Go Green (G Coin). Every phase focuses on sustainable growth, transparency and community development.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<div style="font-size:55px;">✅</div>
+
+<h3 style="margin:20px 0;color:#00ff99;">
+
+Phase 1
+
+</h3>
+
+<p>
+
+✔ Brand Creation<br>
+✔ Website Launch<br>
+✔ Social Media Setup<br>
+✔ Community Building
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:55px;">🚀</div>
+
+<h3 style="margin:20px 0;color:#00ff99;">
+
+Phase 2
+
+</h3>
+
+<p>
+
+✔ Marketing Campaign<br>
+✔ Partnerships<br>
+✔ Community Expansion<br>
+✔ Smart Contract Preparation
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:55px;">💎</div>
+
+<h3 style="margin:20px 0;color:#00ff99;">
+
+Phase 3
+
+</h3>
+
+<p>
+
+✔ Token Launch<br>
+✔ Liquidity Lock<br>
+✔ DEX Listing<br>
+✔ Community Events
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:55px;">📈</div>
+
+<h3 style="margin:20px 0;color:#00ff99;">
+
+Phase 4
+
+</h3>
+
+<p>
+
+✔ CoinGecko Listing<br>
+✔ CoinMarketCap Listing<br>
+✔ Holder Growth<br>
+✔ Global Marketing
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:55px;">🌍</div>
+
+<h3 style="margin:20px 0;color:#00ff99;">
+
+Phase 5
+
+</h3>
+
+<p>
+
+✔ Strategic Partnerships<br>
+✔ Staking Utility<br>
+✔ Ecosystem Expansion<br>
+✔ Governance
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div style="font-size:55px;">🔥</div>
+
+<h3 style="margin:20px 0;color:#00ff99;">
+
+Phase 6
+
+</h3>
+
+<p>
+
+✔ Global Adoption<br>
+✔ Future Utilities<br>
+✔ Cross-chain Integration<br>
+✔ Long-term Sustainability
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- ROADMAP HIGHLIGHTS -->
+<!-- ===================================== -->
+
+<section id="future">
+
+<div class="container">
+
+<h2>🚀 Future Highlights</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3 style="color:#00ff99;">
+🌐 Global Community
+</h3>
+
+<p>
+
+Building one of the strongest green crypto communities worldwide.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 style="color:#00ff99;">
+💰 Exchange Expansion
+</h3>
+
+<p>
+
+Targeting multiple centralized and decentralized exchange listings.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 style="color:#00ff99;">
+⚡ Ecosystem
+</h3>
+
+<p>
+
+Developing future utilities, staking and community rewards.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 style="color:#00ff99;">
+🌱 Sustainability
+</h3>
+
+<p>
+
+Supporting long-term blockchain innovation with environmental awareness.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+  <!-- ===================================== -->
+<!-- FAQ SECTION -->
+<!-- ===================================== -->
+
+<section id="faq">
+
+<div class="container">
+
+<h2>❓ Frequently Asked Questions</h2>
+
+<p style="
+max-width:800px;
+margin:0 auto 50px;
+text-align:center;
+font-size:18px;
+color:#d8d8d8;">
+
+Find answers to the most common questions about Go Green (G Coin).
+
+</p>
+
+<div class="faq-item card">
+
+<button class="faq-btn">
+
+What is Go Green (G Coin)?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-content">
+
+<p>
+
+Go Green (G Coin) is a community-driven cryptocurrency focused on sustainability, transparency and long-term blockchain innovation.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item card">
+
+<button class="faq-btn">
+
+What is the Maximum Supply?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-content">
+
+<p>
+
+The maximum supply is <strong>1,000,000,000 (1 Billion)</strong> G Coin.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item card">
+
+<button class="faq-btn">
+
+Which blockchain will G Coin use?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-content">
+
+<p>
+
+The official blockchain network will be announced before launch.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item card">
+
+<button class="faq-btn">
+
+When will the token launch?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-content">
+
+<p>
+
+The official launch date will be announced through our official X and Telegram channels.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item card">
+
+<button class="faq-btn">
+
+Where can I get updates?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-content">
+
+<p>
+
+Follow us on X, Telegram and GitHub for all official updates.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+.faq-item{
+
+margin-bottom:20px;
+
+text-align:left;
+
+}
+
+.faq-btn{
+
+width:100%;
+
+background:none;
+
+border:none;
+
+color:#fff;
+
+font-size:18px;
+
+font-weight:bold;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+cursor:pointer;
+
+padding:5px;
+
+}
+
+.faq-btn span{
+
+font-size:28px;
+
+color:#00ff99;
+
+}
+
+.faq-content{
+
+max-height:0;
+
+overflow:hidden;
+
+transition:max-height .4s ease;
+
+color:#ddd;
+
+padding:0 5px;
+
+}
+
+.faq-content p{
+
+padding-top:18px;
+
+}
+
+</style>
+
+<script>
+
+document.querySelectorAll(".faq-btn").forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+const content=button.nextElementSibling;
+
+const icon=button.querySelector("span");
+
+if(content.style.maxHeight){
+
+content.style.maxHeight=null;
+
+icon.innerHTML="+";
+
+}else{
+
+content.style.maxHeight=content.scrollHeight+"px";
+
+icon.innerHTML="−";
+
+}
+
+});
+
+});
+
+</script>
+  <!-- ===================================== -->
+<!-- COMMUNITY SECTION -->
+<!-- ===================================== -->
+
+<section id="community">
+
+<div class="container">
+
+<h2>🌍 Join Our Community</h2>
+
+<p style="
+max-width:780px;
+margin:0 auto 50px;
+text-align:center;
+font-size:18px;
+color:#d8d8d8;">
+
+Stay connected with the Go Green (G Coin) community.
+Follow our official channels for announcements, development updates and future releases.
+
+</p>
+
+<div class="grid">
+
+<!-- X -->
+
+<div class="card">
+
+<div style="font-size:60px;">🐦</div>
+
+<h3 style="margin:20px 0;color:#00ff99;">
+
+Official X
+
+</h3>
+
+<p>
+
+Follow us for announcements, marketing campaigns and project updates.
+
+</p>
+
+<br>
+
+<a
+
+href="https://x.com/gogreencoinx"
+
+target="_blank"
+
+class="btn btn-green">
+
+Visit X
+
+</a>
+
+</div>
+
+<!-- Telegram -->
+
+<div class="card">
+
+<div style="font-size:60px;">💬</div>
+
+<h3 style="margin:20px 0;color:#00ff99;">
+
+Telegram
+
+</h3>
+
+<p>
+
+Join our official Telegram community and chat with members.
+
+</p>
+
+<br>
+
+<a
+
+href="https://t.me/Gcoinmeme"
+
+target="_blank"
+
+class="btn btn-green">
+
+Join Telegram
+
+</a>
+
+</div>
+
+<!-- GitHub -->
+
+<div class="card">
+
+<div style="font-size:60px;">💻</div>
+
+<h3 style="margin:20px 0;color:#00ff99;">
+
+GitHub
+
+</h3>
+
+<p>
+
+View project development and future open-source releases.
+
+</p>
+
+<br>
+
+<a
+
+href="https://github.com/gogreencoinofficial"
+
+target="_blank"
+
+class="btn btn-green">
+
+Open GitHub
+
+</a>
+
+</div>
+
+<!-- Email -->
+
+<div class="card">
+
+<div style="font-size:60px;">📧</div>
+
+<h3 style="margin:20px 0;color:#00ff99;">
+
+Email
+
+</h3>
+
+<p>
+
+gogreengcoin@gmail.com
+
+</p>
+
+<br>
+
+<a
+
+href="mailto:gogreengcoin@gmail.com"
+
+class="btn btn-green">
+
+Send Email
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- OFFICIAL LINKS -->
+<!-- ===================================== -->
+
+<section id="links">
+
+<div class="container">
+
+<h2>🔗 Official Links</h2>
+
+<div class="card">
+
+<p style="margin:15px 0;">
+
+🐦 X:
+<br>
+
+<a href="https://x.com/gogreencoinx"
+target="_blank">
+
+https://x.com/gogreencoinx
+
+</a>
+
+</p>
+
+<hr style="margin:25px 0;border-color:#333;">
+
+<p style="margin:15px 0;">
+
+💬 Telegram:
+<br>
+
+<a href="https://t.me/Gcoinmeme"
+target="_blank">
+
+https://t.me/Gcoinmeme
+
+</a>
+
+</p>
+
+<hr style="margin:25px 0;border-color:#333;">
+
+<p style="margin:15px 0;">
+
+💻 GitHub:
+<br>
+
+<a href="https://github.com/gogreencoinofficial"
+target="_blank">
+
+https://github.com/gogreencoinofficial
+
+</a>
+
+</p>
+
+<hr style="margin:25px 0;border-color:#333;">
+
+<p style="
+  
+  <!-- ===================================== -->
+<!-- PREMIUM FOOTER -->
+<!-- ===================================== -->
+
+<footer id="footer">
+
+<div class="container">
+
+<h2 style="color:#00ff99;margin-bottom:25px;">
+
+🌿 Go Green (G Coin)
+
+</h2>
+
+<p style="
+max-width:700px;
+margin:0 auto 30px;
+color:#cfcfcf;">
+
+Building a sustainable blockchain ecosystem powered by
+community, transparency and innovation.
+
+</p>
+
+<div style="
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:35px;">
+
+<a href="https://x.com/gogreencoinx"
+target="_blank"
+class="btn btn-green">
+
+🐦 X
+
+</a>
+
+<a href="https://t.me/Gcoinmeme"
+target="_blank"
+class="btn btn-green">
+
+💬 Telegram
+
+</a>
+
+<a href="https://github.com/gogreencoinofficial"
+target="_blank"
+class="btn btn-green">
+
+💻 GitHub
+
+</a>
+
+<a href="mailto:gogreengcoin@gmail.com"
+class="btn btn-green">
+
+📧 Email
+
+</a>
+
+</div>
+
+<hr style="
+border:1px solid rgba(255,255,255,.1);
+margin:30px 0;">
+
+<p style="color:#aaaaaa;">
 
 © 2026 Go Green (G Coin). All Rights Reserved.
 
+</p>
+
+<p style="
+margin-top:15px;
+font-size:15px;
+color:#888;">
+
+This website is for informational purposes only.
+Nothing on this website should be considered financial or investment advice.
+Always Do Your Own Research (DYOR).
+
+</p>
+
+<p style="
+margin-top:20px;
+color:#00ff99;
+font-weight:bold;">
+
+❤️ Made with Love by Go Green Community
+
+</p>
+
+</div>
+
 </footer>
 
+<!-- ========================= -->
+<!-- BACK TO TOP BUTTON -->
+<!-- ========================= -->
+
+<a href="#home"
+
+id="topBtn"
+
+style="
+position:fixed;
+bottom:25px;
+right:25px;
+width:55px;
+height:55px;
+border-radius:50%;
+background:#00d96f;
+color:white;
+font-size:26px;
+text-decoration:none;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 0 20px rgba(0,255,150,.4);
+transition:.3s;
+z-index:999;">
+
+↑
+
+</a>
+
+<script>
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY>300){
+
+topBtn.style.opacity="1";
+
+}else{
+
+topBtn.style.opacity=".6";
+
+}
+
+});
+
+</script>
+
 </body>
+
 </html>
